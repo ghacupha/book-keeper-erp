@@ -1,0 +1,11 @@
+id;entry_amount;transaction_entry_type;description;was_proposed;was_posted;was_deleted;was_approved;transaction_account_id
+1;80721;DEBIT;transition;true;true;true;false;1
+2;58225;DEBIT;real-time;true;false;false;true;2
+3;46597;DEBIT;Electronics GB Infrastructure;true;true;true;true;3
+4;50158;DEBIT;Fantastic;false;true;true;true;4
+5;81;CREDIT;Customer azure Grass-roots;false;true;false;false;5
+6;56098;DEBIT;Concrete;false;false;true;true;6
+7;29295;CREDIT;Granite Manor;true;false;false;false;7
+8;12490;CREDIT;seize payment payment;false;true;true;false;8
+9;38444;CREDIT;Specialist end-to-end cross-platform;false;false;true;true;9
+10;88521;CREDIT;redundant FTP;true;true;false;true;10

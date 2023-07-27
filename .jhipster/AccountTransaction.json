@@ -1,0 +1,51 @@
+{
+  "changelogDate": "20230718144045",
+  "dto": "mapstruct",
+  "entityTableName": "account_transaction",
+  "fields": [
+    {
+      "fieldName": "transactionDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "wasProposed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasPosted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasApproved",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "AccountTransaction",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "transactionEntry",
+      "otherEntityRelationshipName": "accountTransaction",
+      "relationshipName": "transactionEntry",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

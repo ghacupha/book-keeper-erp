@@ -1,0 +1,51 @@
+{
+  "changelogDate": "20230718095043",
+  "dto": "mapstruct",
+  "entityTableName": "transaction_account",
+  "fields": [
+    {
+      "fieldName": "accountName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "openingBalance",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "TransactionAccount",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "accountName",
+      "otherEntityName": "transactionAccount",
+      "relationshipName": "parentAccount",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "transactionAccountType",
+      "relationshipName": "transactionAccountType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "transactionCurrency",
+      "relationshipName": "transactionCurrency",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "service": "serviceImpl"
+}

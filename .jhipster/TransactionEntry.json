@@ -1,0 +1,59 @@
+{
+  "changelogDate": "20230718134338",
+  "dto": "mapstruct",
+  "entityTableName": "transaction_entry",
+  "fields": [
+    {
+      "fieldName": "entryAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "transactionEntryType",
+      "fieldType": "TransactionEntryTypes",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DEBIT,CREDIT"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wasProposed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasPosted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wasApproved",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "TransactionEntry",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "accountName",
+      "otherEntityName": "transactionAccount",
+      "relationshipName": "transactionAccount",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "referenceNumber",
+      "otherEntityName": "accountTransaction",
+      "relationshipName": "accountTransaction",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
